@@ -1,0 +1,147 @@
+/* Base menu structure */
+nav.mmenu {
+    min-width: 270px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    border-right: 1px solid #d6d6d6;
+    overflow-y: scroll;
+    z-index: 999;
+    transitoin: left 2s;
+    -webkit-transition: left 0.5s;
+}
+nav.mmenu ul {
+    padding: 0;
+}
+nav.mmenu ul li {
+    list-style: none;
+    border-bottom: 1px solid;
+    border-color:#d6d6d6;
+}
+nav.mmenu ul li:first-child {
+    border-top: 1px solid;
+    border-color:#d6d6d6;
+}
+nav.mmenu ul li a {
+    padding: 14px;
+    display: inline-block;
+    width: 82%;
+}
+nav.mmenu ul li.deeper > a:first-child {
+    border-right: 1px solid #ccc;
+}
+nav.mmenu ul li ul.submenu {
+    margin: 0;
+    display: none;
+}
+nav.mmenu ul li ul.submenu li:last-child {
+    border-bottom: 0px;
+}
+nav.mmenu ul li ul.submenu li a:first-child {
+    padding-left: 30px;
+}
+nav.mmenu ul li ul.submenu-open {
+    display: block;
+}
+nav.mmenu-open {
+    left: 0;
+    transitoin: left 2s;
+    -webkit-transition: left 0.5s;
+}
+/* Buttons */
+nav.mmenu a.menu-close {
+    font-size: 24px;
+    line-height: 1;
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    margin: 15px 10px;
+}
+nav.mmenu a.sub-toggle {
+    display: inline-block;
+    padding: 0;
+    position: absolute;
+    width: 17%;
+    height: 100%;
+    text-decoration: none;
+}
+nav.mmenu li.submenu-open a.sub-toggle {
+    height: 56px;
+}
+nav.mmenu a.sub-toggle::after {
+    font-size: 34px;
+    content: '\002B';
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+nav.mmenu li.submenu-open > a.sub-toggle::after {
+    content: '\002D';
+}
+
+/* Menu toggle */
+a.mmenu-open {
+    height: 40px;
+    padding: 12px;
+    font-size: 17px;
+    width: 100%;
+    text-decoration: none;
+    z-index:999;
+    display:block;
+}
+.mmenu-top {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.mmenu-fixed {
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+/* colors & additional styling */
+nav.mmenu {
+    border-color: #d6d6d6;
+    box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, .4);
+}
+nav.mmenu ul li {
+    border-color:#d6d6d6;
+    position: relative;
+}
+nav.mmenu ul li:first-child {
+    border-color:#d6d6d6;
+}
+nav.mmenu ul li a {
+    font-size: 17px;
+}
+nav.mmenu a.sub-toggle::after {
+    border-color:#d6d6d6;
+}
+
+/* Extra CSS voor PLC direct */
+.mmenu-open {
+    position:absolute;
+    left:0;
+    margin-top:10px;
+}
+nav.mmenu-open {
+    margin-top:0px;
+}
+.mmenu-fixed {
+    position:fixed !important;
+    margin-top:0px;
+}
+nav.mmenu,
+nav.mmenu ul li,
+nav.mmenu ul li:first-child,
+nav.mmenu ul li.deeper a:first-child {
+    border-color:#474747;
+    box-shadow:none;
+}
+nav.mmenu li.submenu-open a.sub-toggle {
+	height:50px;
+}

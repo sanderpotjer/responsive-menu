@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+<name>MOD_RESPONSIVEMENU</name>
+<author>Nter webdesign</author>
+<creationDate>January 2015</creationDate>
+<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+<authorEmail>Nter webdesign</authorEmail>
+<authorUrl>www.nterwebdesign.nl</authorUrl>
+<version>3.0</version>
+<description>MOD_RESPONSIVEMENU_DESC</description>
+<files>
+	<filename module="mod_responsivemenu">mod_responsivemenu.php</filename>
+	<folder>language</folder>
+	<folder>tmpl</folder>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<filename>mod_responsivemenu.xml</filename>
+</files>
+<media destination="mod_responsivemenu" folder="media">
+	<folder>css</folder>
+	<folder>js</folder>
+</media>
+<languages folder="language">
+	<language tag="nl-NL">nl-NL/nl-NL.mod_responsivemenu.ini</language>
+	<language tag="nl-NL">nl-NL/nl-NL.mod_responsivemenu.sys.ini</language>
+	<language tag="en-GB">en-GB/en-GB.mod_responsivemenu.ini</language>
+	<language tag="en-GB">en-GB/en-GB.mod_responsivemenu.sys.ini</language>
+</languages>
+<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field
+				name="menutype"
+				type="menu"
+				label="MOD_RESPONSIVEMENU_FIELD_MENUTYPE_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENUTYPE_DESC" />
+			<field
+				name="base"
+				type="menuitem"
+				label="MOD_RESPONSIVEMENU_FIELD_ACTIVE_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_ACTIVE_DESC"
+				>
+				<option value="">JCURRENT</option>
+			</field>
+			<field
+				name="startLevel"
+				type="list"
+				default="1"
+				label="MOD_RESPONSIVEMENU_FIELD_STARTLEVEL_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_STARTLEVEL_DESC"
+			>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+				<option value="6">J6</option>
+				<option value="7">J7</option>
+				<option value="8">J8</option>
+				<option value="9">J9</option>
+				<option value="10">J10</option>
+			</field>
+			<field
+				name="endLevel"
+				type="list"
+				default="0"
+				label="MOD_RESPONSIVEMENU_FIELD_ENDLEVEL_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_ENDLEVEL_DESC"
+				>
+				<option value="0">JALL</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+				<option value="6">J6</option>
+				<option value="7">J7</option>
+				<option value="8">J8</option>
+				<option value="9">J9</option>
+				<option value="10">J10</option>
+			</field>
+			<field
+				name="showAllChildren"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="MOD_RESPONSIVEMENU_FIELD_ALLCHILDREN_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_ALLCHILDREN_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="mobilemenu">
+			<field
+				name="mobilebackground"
+				type="color"
+				default="#ffffff"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILEBACKGROUND_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILEBACKGROUND_DESC" />
+			<field
+				name="mobileactivebackground"
+				type="color"
+				default="#f1f1f1"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILEACTIVEBACKGROUND_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILEACTIVEBACKGROUND_DESC" />
+			<field
+				name="mobiletextcolor"
+				type="color"
+				default="#333333"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILETEXTCOLOR_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILETEXTCOLOR_DESC" />
+			<field
+				name="mobilebreak"
+				type="text"
+				default="992px"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILEBREAK_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILEBREAK_DESC" />
+			<field
+				name="mobiledisappear"
+				type="text"
+				default="#menu"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILEDISAPPEAR_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILEDISAPPEAR_DESC" />
+			<field
+				name="menulabel"
+				type="text"
+				default="MENU"
+				label="MOD_RESPONSIVEMENU_FIELD_MENULABEL_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENULABEL_DESC" />
+			<field
+				name="menulabelcolor"
+				type="color"
+				default="#ffffff"
+				label="MOD_RESPONSIVEMENU_FIELD_MENULABELCOLOR_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENULABELCOLOR_DESC" />
+			<field
+				name="menutogglebackground"
+				type="color"
+				default="#666666"
+				label="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLEBACKGROUND_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLEBACKGROUND_DESC" />
+			<field
+				name="menutogglecolor"
+				type="color"
+				default="#ffffff"
+				label="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLECOLOR_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLECOLOR_DESC" />
+			<field
+				name="menutoggleheight"
+				type="text"
+				default="45px"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILETOGGLEHEIGHT_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILETOGGLEHEIGHT_DESC" />
+			<field
+				name="menutogglefixed"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLEFIXED_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLEFIXED_DESC"
+				>
+					<option value="mmenu-fixed">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+			<field
+				name="menutoggletop"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLETOP_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MENUTOGGLETOP_DESC"
+				>
+					<option value="mmenu-top">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+			<field
+				name="mobilesubmenuopened"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="MOD_RESPONSIVEMENU_FIELD_MOBILESUBMENUOPENED_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_MOBILESUBMENUOPENED_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+			<field
+				name="loadcss"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="MOD_RESPONSIVEMENU_FIELD_LOADCSS_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_LOADCSS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+		</fieldset>
+		<fieldset name="custom_css">
+			<field
+				name="customcss"
+				label="MOD_RESPONSIVEMENU_FIELD_CUSTOMCSS_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_CUSTOMCSS_DESC"
+				type="editor"
+				width="300"
+				editor="codemirror"
+				filter="safehtml" />
+		</fieldset>
+		<fieldset name="advanced">
+			<field
+				name="tag_id"
+				type="text"
+				label="MOD_RESPONSIVEMENU_FIELD_TAG_ID_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_TAG_ID_DESC" />
+			<field
+				name="class_sfx"
+				type="text"
+				label="MOD_RESPONSIVEMENU_FIELD_CLASS_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_CLASS_DESC" />
+			<field
+				name="window_open"
+				type="text"
+				label="MOD_RESPONSIVEMENU_FIELD_TARGET_LABEL"
+				description="MOD_RESPONSIVEMENU_FIELD_TARGET_DESC" />
+			<field
+				name="layout"
+				type="modulelayout"
+				label="JFIELD_ALT_LAYOUT_LABEL"
+				description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			<field
+				name="moduleclass_sfx"
+				type="textarea" rows="3"
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			<field
+				name="cache"
+				type="list"
+				default="1"
+				label="COM_MODULES_FIELD_CACHING_LABEL"
+				description="COM_MODULES_FIELD_CACHING_DESC">
+				<option
+					value="1">JGLOBAL_USE_GLOBAL</option>
+				<option
+					value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+			<field
+				name="cache_time"
+				type="text"
+				default="900"
+				label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+				description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			<field
+				name="cachemode"
+				type="hidden"
+				default="itemid">
+				<option
+					value="itemid"></option>
+			</field>
+		</fieldset>
+	</fields>
+</config>
+<updateservers>
+	<server type="extension" name="Responsivemenu" priority="1">http://update.nterwebdesign.nl/responsivemenu.xml</server>
+</updateservers>
+</extension>
