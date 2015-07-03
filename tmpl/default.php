@@ -43,7 +43,9 @@ nav.mmenu ul li a, .menu-close {
 </a>
 
 <nav class="mmenu">
-	<a href="#" class="menu-close" onclick="return false">Terug</a>
+	<a href="#" class="menu-close" onclick="return false">
+		<?php echo JText::_('MOD_RESPONSIVEMENU_BACK'); ?>
+	</a>
 	<ul>
 	<?php
 	foreach ($list as $i => &$item)
