@@ -9,6 +9,7 @@
 <authorUrl>www.nterwebdesign.nl</authorUrl>
 <version>3.0</version>
 <description>MOD_RESPONSIVEMENU_DESC</description>
+
 <files>
 	<filename module="mod_responsivemenu">mod_responsivemenu.php</filename>
 	<filename>mod_responsivemenu.xml</filename>
@@ -16,16 +17,12 @@
 	<folder>language</folder>
 	<folder>tmpl</folder>
 </files>
+
 <media destination="mod_responsivemenu" folder="media">
 	<folder>css</folder>
 	<folder>js</folder>
 </media>
-<languages folder="language">
-	<language tag="nl-NL">nl-NL/nl-NL.mod_responsivemenu.ini</language>
-	<language tag="nl-NL">nl-NL/nl-NL.mod_responsivemenu.sys.ini</language>
-	<language tag="en-GB">en-GB/en-GB.mod_responsivemenu.ini</language>
-	<language tag="en-GB">en-GB/en-GB.mod_responsivemenu.sys.ini</language>
-</languages>
+
 <config>
 	<fields name="params">
 		<fieldset name="basic">
