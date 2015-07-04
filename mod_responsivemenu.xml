@@ -11,11 +11,10 @@
 <description>MOD_RESPONSIVEMENU_DESC</description>
 <files>
 	<filename module="mod_responsivemenu">mod_responsivemenu.php</filename>
+	<filename>mod_responsivemenu.xml</filename>
+	<filename>helper.php</filename>
 	<folder>language</folder>
 	<folder>tmpl</folder>
-	<filename>helper.php</filename>
-	<filename>index.html</filename>
-	<filename>mod_responsivemenu.xml</filename>
 </files>
 <media destination="mod_responsivemenu" folder="media">
 	<folder>css</folder>
